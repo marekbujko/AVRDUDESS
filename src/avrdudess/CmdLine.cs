@@ -111,9 +111,6 @@ namespace avrdudess
             if (mainForm.disableFlashErase)
                 cmdLineOption("D");
 
-            if (mainForm.eraseFlashAndEEPROM)
-                cmdLineOption("e");
-
             if (mainForm.additionalSettings.Length > 0)
                 sb.Append($"{mainForm.additionalSettings} ");
 
@@ -132,9 +129,6 @@ namespace avrdudess
 
             if (mainForm.disableFlashErase)
                 cmdLineOption("D");
-
-            if (mainForm.eraseFlashAndEEPROM)
-                cmdLineOption("e");
 
             if (mainForm.additionalSettings.Length > 0)
                 sb.Append($"{mainForm.additionalSettings} ");
