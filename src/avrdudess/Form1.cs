@@ -574,13 +574,13 @@ namespace avrdudess
         {
             Text = string.Format(
 #if DEBUG
-                "AVRDUDESS {0}.{1} ({2}) [DEBUG]",
+                "AVRDUDESS {0}.{1} (avrdude version {2}) [DEBUG]",
 #else
-                "AVRDUDESS {0}.{1} ({2})",
+                "AVRDUDESS {0}.{1} (avrdude version {2})",
 #endif
                 AssemblyData.version.Major,
                 AssemblyData.version.Minor,
-                string.IsNullOrEmpty(avrdude?.version) ? "avrdude version UNKNOWN" : avrdude.version
+                string.IsNullOrEmpty(avrdude?.version) ? "UNKNOWN" : avrdude.version
                 );
         }
 

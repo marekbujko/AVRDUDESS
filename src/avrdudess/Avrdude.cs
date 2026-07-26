@@ -184,7 +184,9 @@ namespace avrdudess
                     if (pos > -1)
                     {
                         log = log.Substring(pos);
-                        version = log.Substring(0, log.IndexOf(','));
+                        var parts = log.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                        if (parts.Length > 2)
+                            version = parts[2].Replace(",", "");
                     }
                 }
             }
