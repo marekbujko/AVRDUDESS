@@ -86,7 +86,7 @@ Name: "custom"; Description: "Custom installation"; Flags: iscustom
 
 [Components]
 Name: "main"; Description: "AVRDUDESS"; Types: full compact custom; Flags: fixed
-Name: "avrdude"; Description: "avrdude (v8.1 x86 MSVC)"; Types: full
+Name: "avrdude"; Description: "avrdude (v8.2 x86 MSVC)"; Types: full
 Name: "avrsize"; Description: "avr-size"; Types: full
 
 [Tasks]
