@@ -93,6 +93,7 @@ Toto použijte, pokud chcete aktualizovat pouze EEPROM paměť</string>
 		<string name="NOTHING_FOUND_IN_CONFIG_FILE">V konfiguračním souboru nebylo nic nalezeno {0}</string>
 		<string name="CONFIG_LOADED_PROGS_MCUS">Nahráno {0} programátorů a {1} procesorů</string>
 		<string name="IN_PORTABLE_MODE">Běží v přenosném režimu</string>
+		<string name="CONFIRM_ERASE">You have selected Erase flash and EEPROM (-e), are you sure?</string>
 
 		<string name="UPDATE_CHECK">Kontrola aktualizace...</string>
 		<string name="UPDATE_FAILED">Chyba při kontrole aktualizace: {0}</string>

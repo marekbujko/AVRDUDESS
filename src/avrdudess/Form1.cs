@@ -1175,6 +1175,15 @@ namespace avrdudess
         // Program!
         private void btnProgram_Click(object sender, EventArgs e)
         {
+            if (eraseFlashAndEEPROM)
+            {
+                if ((flashFile.Length > 0 && flashFileOperation != FILEOP_WRITE) || (EEPROMFile.Length > 0 && EEPROMFileOperation != FILEOP_WRITE))
+                {
+                    if (MsgBox.confirm("_CONFIRM_ERASE") != DialogResult.OK)
+                        return;
+                }
+            }
+
             avrdude.launch(txtCmdLine.Text);
         }
 

@@ -88,6 +88,7 @@ Użyj tej opcji jeśli chcesz zaprogramować tylko EEPROM</string>
 		<string name="NOTHING_FOUND_IN_CONFIG_FILE">Nie znaleziono w pliku konfigu {0}</string>
 		<string name="CONFIG_LOADED_PROGS_MCUS">Załadowano {0} programatorów i {1} mikrokontrolerów</string>
 		<string name="IN_PORTABLE_MODE">Pracuję w trybie przenośnym</string>
+		<string name="CONFIRM_ERASE">You have selected Erase flash and EEPROM (-e), are you sure?</string>
 
 		<string name="UPDATE_CHECK">Sprawdzam aktualizację...</string>
 		<string name="UPDATE_FAILED">Sprawdzenie nieudane: {0}</string>

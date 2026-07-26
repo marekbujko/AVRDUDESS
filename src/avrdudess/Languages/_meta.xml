@@ -103,6 +103,7 @@
 		<k name="NOTHING_FOUND_IN_CONFIG_FILE" />
 		<k name="CONFIG_LOADED_PROGS_MCUS" />
 		<k name="IN_PORTABLE_MODE" />
+		<k name="CONFIRM_ERASE" />
 
 		<k name="UPDATE_CHECK" />
 		<k name="UPDATE_FAILED" />

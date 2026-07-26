@@ -88,6 +88,7 @@ Bunu yalnızca EEPROM'u güncellemek istiyorsanız kullanın</string>
 		<string name="NOTHING_FOUND_IN_CONFIG_FILE">{0} yapılandırma dosyasında hiçbir şey bulunamadı</string>
 		<string name="CONFIG_LOADED_PROGS_MCUS">{0} programcı ve {1} Mikrodenetleyici yüklendi</string>
 		<string name="IN_PORTABLE_MODE">Taşınabilir modda çalıştırma</string>
+		<string name="CONFIRM_ERASE">You have selected Erase flash and EEPROM (-e), are you sure?</string>
 
 		<string name="UPDATE_CHECK">Güncellemeler kontrol ediliyor...</string>
 		<string name="UPDATE_FAILED">Güncelleme kontrolü başarısız oldu: {0}</string>
