@@ -430,6 +430,18 @@ namespace avrdudess
             return launch(args, null, null, outputTo);
         }
 
+        private string cleanErrorLog(string log)
+        {
+            // Issue #80
+            // Issue #122
+            // avrdude 7.1+ outputs USBasp firmware messages as errors instead of warnings
+            // Remove the error message since it confuses things
+
+            log = log.ToLower();
+            log = log.Replace("error: cannot set sck period", null);
+            return log;
+        }
+
         public void detectMCU(string args)
         {
             launch(args, (object _) => {
@@ -442,7 +454,8 @@ namespace avrdudess
                 {
                     // AVRDUDE v8.0 doesn't print out a signature if everything was successful
                     // Probably safe to assume it's an ATmega8 - see CmdLine.genReadSig()
-                    if (!outputLogStdErr.ToLower().Contains("error"))
+                    var log = cleanErrorLog(outputLogStdErr);
+                    if (!log.Contains("error"))
                         detectedSignature = "1e9307";
                 }
 
@@ -461,13 +474,9 @@ namespace avrdudess
             if (types == null)
                 return;
 
-            string log = outputLogStdErr.ToLower();
+            string log = cleanErrorLog(outputLogStdErr);
 
-            // Issue #80: avrdude 7.1+ outputs USBasp firmware messages as errors instead of warnings
-            // Remove the error message since it confuses things
-            log = log.Replace("error: cannot set sck period", null);
-
-            if (log.IndexOf("error") > -1 || log.IndexOf("fail") > -1)
+            if (log.Contains("error") || log.Contains("fail"))
             {
                 OnReadFuseLock?.Invoke(this, new ReadFuseLockEventArgs(FuseLockType.None, ""));
                 return;
